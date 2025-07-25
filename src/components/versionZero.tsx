@@ -4,7 +4,7 @@ export default function VersionZero() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>Hi I'm Ting!</h1>
+        <h1>Hi I&apos;m Ting!</h1>
         <p>
           a remote frontend developer who bridges the gap between technical
           excellence and business impact. With 3+ years of experience building
@@ -15,9 +15,9 @@ export default function VersionZero() {
         <p>
           <strong>What makes me different:</strong> I communicate effectively
           across cultures and technical levels, having worked with teams
-          spanning Western and Asian markets. I don't just code features—I
-          understand the "why" behind them and translate complex technical
-          concepts into clear business value.
+          spanning Western and Asian markets. I don&apos;t just code features—I
+          understand the &quot;why&quot; behind them and translate complex
+          technical concepts into clear business value.
         </p>
         <p className="flex items-center gap-x-[4px]">
           <Image
