@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
+import { METADATA } from '@/constants/metadata'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -15,33 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-export const metadata: Metadata = {
-  title:
-    'Ting Chang - Remote Frontend Developer | React & Product-Focused Development',
-  description:
-    'Remote frontend developer with 3+ years building scalable web applications. Specialized in React, Next.js, and user-focused product development. Available for remote opportunities globally.',
-  authors: { url: 'https://tingbuilds.dev', name: 'Ting Chang' },
-  keywords: [
-    'remote frontend developer',
-    'React developer',
-    'Next.js developer',
-    'product development',
-    'remote work',
-    'Taiwan developer',
-    'web developer',
-    'web applications',
-  ],
-  openGraph: {
-    type: 'website',
-    url: 'https://tingbuilds.dev',
-    title:
-      'Ting Chang - Remote Frontend Developer | React & Product-Focused Development',
-    description:
-      'Remote frontend developer with 3+ years building scalable web applications. Specialized in React, Next.js, and user-focused product development. Available for remote opportunities globally.',
-    siteName: 'Ting Chang - Remote Frontend Developer Portfolio',
-    // images: [{ url: 'https://example.com/og.png' }],
-  },
-}
+export const metadata = METADATA
 
 export default function RootLayout({
   children,

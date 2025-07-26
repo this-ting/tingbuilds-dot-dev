@@ -51,7 +51,7 @@ export default function VersionZero() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://twitter.com/this_ting"
+          href="https://x.com/this_ting"
           target="_blank"
           rel="noopener noreferrer"
         >
