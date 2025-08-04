@@ -17,10 +17,14 @@ import {
 
 const StatCard = ({ value, label, color }: HeroStat) => (
   <div
-    className={`bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-${color}-500 hover:scale-105 transition-all duration-300 cursor-default`}
+    className={`bg-gray-800 rounded-lg p-2 sm:p-2 border border-gray-700 hover:scale-105 transition-all duration-300`}
   >
-    <div className={`text-2xl font-bold text-${color}-400`}>{value}</div>
-    <div className="text-xs text-gray-400">{label}</div>
+    <div
+      className={`text-lg sm:text-xl md:text-2xl font-bold text-${color}-400`}
+    >
+      {value}
+    </div>
+    <div className="text-xs sm:text-sm text-gray-400">{label}</div>
   </div>
 );
 
@@ -124,40 +128,54 @@ const ContactLink = ({ emoji, text, url }: ContactInfo) => (
 export default function VersionZero() {
   return (
     <div className="min-h-screen bg-gray-900 text-green-400 font-mono text-sm leading-relaxed">
-      <div className="max-w-6xl mx-auto p-6">
+      <div className="max-w-6xl mx-auto p-6 pt-18">
         {/* Enhanced Hero Section */}
-        <section className="min-h-[70vh] flex flex-col justify-center items-center text-center mb-16">
-          <div className="mb-12">
-            <div className="text-blue-400 text-lg md:text-xl mb-4 animate-pulse">
-              <span className="text-purple-400">function</span>{" "}
-              <span className="text-yellow-400">portfolioFor</span>
-              <span className="text-white">(</span>
-              <span className="text-orange-400">developer</span>
-              <span className="text-white"> = </span>
-              <span className="text-green-300">&apos;ting-chang&apos;</span>
-              <span className="text-white">) {"{"}</span>
-            </div>
-            <div className="text-purple-400 ml-8 text-lg md:text-xl">
-              <span className="text-white">return</span>{" "}
-              <span className="text-green-300 text-2xl md:text-4xl font-bold block mt-2">
-                &apos;
-                <span className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-green-300 animate-typewriter animate-blink">
-                  React Developer & Remote Problem Solver
+        <section className="min-h-[70vh] flex flex-col justify-center items-center text-center mb-8 md:mb-16">
+          {/* Clean Function Declaration - Main Focus */}
+          <div className="mb-8 md:mb-12 w-full max-w-5xl">
+            <div className="space-y-4 md:space-y-6">
+              {/* Function signature */}
+              <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-mono text-gray-300">
+                <span className="text-purple-400 font-bold">function</span>{" "}
+                <span className="text-yellow-400 font-bold">portfolioFor</span>
+                <span className="text-white">(</span>
+                <span className="text-orange-400 italic">developer</span>
+                <span className="text-white"> = </span>
+                <span className="text-green-300 font-semibold">
+                  &apos;ting-chang&apos;
                 </span>
-                &apos;
-              </span>
-              <span className="text-white">;</span>
+                <span className="text-white">) {"{}"}</span>
+              </div>
+
+              {/* Main title - the return value */}
+              <div className="py-6 md:py-8">
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-green-400 block mb-3">
+                    React Developer
+                  </span>
+                  <span className="text-cyan-400 block">
+                    &amp; Remote Problem Solver
+                  </span>
+                </div>
+              </div>
+
+              {/* Subtle closing */}
+              <div className="text-sm sm:text-base md:text-lg font-mono text-gray-400">
+                <span>{`// Building digital solutions worldwide`}</span>
+              </div>
             </div>
-            <div className="text-white text-lg md:text-xl mt-2">{"}"}</div>
           </div>
 
-          <div className="max-w-4xl space-y-6">
-            <p className="text-xl md:text-2xl text-cyan-400 font-semibold">
+          {/* Supporting content */}
+          <div className="w-full max-w-4xl space-y-8 px-4">
+            {/* Location */}
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 font-mono">
               📍 Taipei, Taiwan → 🌍 Building for the world
             </p>
 
-            <div className="text-lg md:text-xl text-gray-300 space-y-2 max-w-3xl mx-auto">
-              <p>
+            {/* Description */}
+            <div className="text-base sm:text-lg md:text-xl text-gray-300 space-y-4 max-w-3xl mx-auto leading-relaxed">
+              <p className="font-light">
                 I craft digital products with{" "}
                 <span className="text-yellow-400 font-semibold">React</span>,{" "}
                 <span className="text-blue-300 font-semibold">Next.js</span>,
@@ -167,37 +185,41 @@ export default function VersionZero() {
                 </span>
                 .
               </p>
-              <p>
+              <p className="font-light">
                 Business brain. Developer hands.{" "}
-                <span className="text-green-400">Remote-first mindset</span>.
-              </p>
-              <p>
-                Turning ideas into products that{" "}
-                <span className="text-orange-400">actually work</span>.
+                <span className="text-green-400 font-medium">
+                  Remote-first mindset
+                </span>
+                .
               </p>
             </div>
 
-            {/* Hero Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto">
               {HERO_STATS.map((stat, index) => (
                 <StatCard key={index} {...stat} />
               ))}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 pt-4">
               <a
                 href="mailto:ting.chaang@gmail.com"
-                className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 text-sm sm:text-base relative overflow-hidden"
               >
-                Let&apos;s Talk →
-              </a>
-              <a
-                href="https://github.com/this-ting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-600 hover:border-gray-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-              >
-                🐙 GitHub
+                <span className="flex flex-col items-center justify-center gap-1">
+                  <span className="flex items-center gap-2">
+                    <span className="relative flex items-center justify-center">
+                      <span className="w-3 h-3 bg-green-400 rounded-full"></span>
+                      <span className="absolute w-3 h-3 bg-green-400 rounded-full animate-pulse opacity-75"></span>
+                      <span className="absolute w-4 h-4 border border-green-400 rounded-full animate-ping opacity-30"></span>
+                    </span>
+                    <span>Let&apos;s Talk →</span>
+                  </span>
+                  <span className="text-xs opacity-70 text-green-100">
+                    Available now
+                  </span>
+                </span>
               </a>
             </div>
           </div>
@@ -293,41 +315,39 @@ export default function VersionZero() {
       </div>
 
       {/* Footer Credits Style - Full Width */}
-      <footer className="w-full mt-16 border-t border-gray-700 bg-gray-800">
-        <div className="max-w-6xl mx-auto p-6">
-          <div className="text-center space-y-2">
-            <div className="text-gray-500 text-xs font-mono">
-              <div className="mb-4">
-                ╔═══════════════════════════════════════════════════════════════╗
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div>
-                  <div className="text-green-400">01: FRONTEND</div>
-                  <div className="text-gray-400">
+      <footer className="w-full mt-8 md:mt-16 border-t border-gray-700 bg-gray-800">
+        <div className="max-w-6xl mx-auto p-4 md:p-6">
+          <div className="text-center space-y-4">
+            {/* Decorative border using CSS */}
+            <div className="relative border-2 border-gray-600 rounded-lg p-4 md:p-6 mx-2 md:mx-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-xs md:text-sm font-mono">
+                <div className="space-y-1">
+                  <div className="text-green-400 font-bold">01: FRONTEND</div>
+                  <div className="text-gray-400 text-xs">
                     React, Next.js, TypeScript
                   </div>
                 </div>
-                <div>
-                  <div className="text-blue-400">02: REMOTE</div>
-                  <div className="text-gray-400">
+                <div className="space-y-1">
+                  <div className="text-blue-400 font-bold">02: REMOTE</div>
+                  <div className="text-gray-400 text-xs">
                     10+ Timezones, 500K+ Users
                   </div>
                 </div>
-                <div>
-                  <div className="text-yellow-400">03: BUILDER</div>
-                  <div className="text-gray-400">
+                <div className="space-y-1 sm:col-span-2 md:col-span-1">
+                  <div className="text-yellow-400 font-bold">03: BUILDER</div>
+                  <div className="text-gray-400 text-xs">
                     MVP to Scale, 0→1 Products
                   </div>
                 </div>
               </div>
-              <div className="mb-4">
-                ║ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ║
-              </div>
-              <div>
-                ╚═══════════════════════════════════════════════════════════════╝
+
+              {/* Progress bar style decoration */}
+              <div className="mt-4 md:mt-6 h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-green-500 via-blue-500 to-yellow-500 rounded-full animate-pulse"></div>
               </div>
             </div>
-            <div className="text-gray-400 text-sm">
+
+            <div className="text-gray-400 text-xs sm:text-sm space-y-1 px-4">
               <p>Built with Next.js & TypeScript • Deployed on Vercel</p>
               <p className="text-gray-500">
                 © 2025 Ting Chang • tingbuilds.dev

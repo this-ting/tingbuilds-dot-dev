@@ -77,7 +77,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: "Arc & Codementor",
-    industry: "Education Technology", 
+    industry: "Education Technology",
     highlights: "177% user growth • 500K+ users • Next.js platform",
     borderColor: "border-purple-500",
     textColor: "text-purple-300",
@@ -156,10 +156,7 @@ export const TECH_STACK: TechStack[] = [
   {
     category: "State & Data:",
     color: "text-yellow-400",
-    items: [
-      "• Redux, Context API, SWR",
-      "• RESTful APIs, GraphQL",
-    ],
+    items: ["• Redux, Context API, SWR", "• RESTful APIs, GraphQL"],
   },
   {
     category: "Tools & Workflow:",
@@ -179,7 +176,8 @@ export const FEATURED_CONTENT: FeaturedContent[] = [
       {
         hashtag: "#tutorial",
         hashtagColor: "text-orange-400",
-        title: "Learn React JS: How To Use React refs and HTML to Set Focus After Rendering",
+        title:
+          "Learn React JS: How To Use React refs and HTML to Set Focus After Rendering",
         url: "https://www.youtube.com/watch?v=sEmb-8E1ZAg",
       },
       {
@@ -197,13 +195,15 @@ export const FEATURED_CONTENT: FeaturedContent[] = [
       {
         hashtag: "#tips",
         hashtagColor: "text-green-400",
-        title: "3 Things You Need to Know to Become a Remote Software Developer",
+        title:
+          "3 Things You Need to Know to Become a Remote Software Developer",
         url: "https://www.youtube.com/watch?v=Wk_DRtwrPgg",
       },
       {
         hashtag: "#demo",
         hashtagColor: "text-purple-400",
-        title: "2022 Solana Summercamp Hackathon Demo: CINI by Team Box In A PARK",
+        title:
+          "2022 Solana Summercamp Hackathon Demo: CINI by Team Box In A PARK",
         url: "https://www.loom.com/share/4c90f0b34d5d4843964c953ff56872e4?t=2",
       },
     ],
