@@ -1,47 +1,17 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { IBM_Plex_Mono } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
+import { METADATA } from '@/constants/metadata'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: '--font-ibm-plex-mono',
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
-
-export const metadata: Metadata = {
-  title:
-    'Ting Chang - Remote Frontend Developer | React & Product-Focused Development',
-  description:
-    'Remote frontend developer with 3+ years building scalable web applications. Specialized in React, Next.js, and user-focused product development. Available for remote opportunities globally.',
-  authors: { url: 'https://tingbuilds.dev', name: 'Ting Chang' },
-  keywords: [
-    'remote frontend developer',
-    'React developer',
-    'Next.js developer',
-    'product development',
-    'remote work',
-    'Taiwan developer',
-    'web developer',
-    'web applications',
-  ],
-  openGraph: {
-    type: 'website',
-    url: 'https://tingbuilds.dev',
-    title:
-      'Ting Chang - Remote Frontend Developer | React & Product-Focused Development',
-    description:
-      'Remote frontend developer with 3+ years building scalable web applications. Specialized in React, Next.js, and user-focused product development. Available for remote opportunities globally.',
-    siteName: 'Ting Chang - Remote Frontend Developer Portfolio',
-    // images: [{ url: 'https://example.com/og.png' }],
-  },
-}
+export const metadata = METADATA
 
 export default function RootLayout({
   children,
@@ -57,7 +27,7 @@ export default function RootLayout({
           />
         )}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlexMono.variable} antialiased`}
       >
         {children}
         <SpeedInsights />
